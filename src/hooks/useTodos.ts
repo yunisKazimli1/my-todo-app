@@ -100,7 +100,7 @@ export function useTodos() {
         await updateTodoDate(id, data);
         await loadTodos();
     } catch (err: any) {
-        setError(err.message);
+        setError(getErrorMessage(err));
     }
     };
 
