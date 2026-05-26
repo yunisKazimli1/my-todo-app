@@ -1,12 +1,8 @@
-import axios from "axios";
 import type { Todo } from "../models/Todo";
 import type { NewTodo } from "../models/NewTodo";
 import type { PagedResult } from "../models/PagedResult";
 import type { UpdateTodoDate } from "../models/UpdateTodoDate";
-
-const api = axios.create({
-  baseURL: "https://localhost:7176/api",
-});
+import { api } from "./api";
 
 // centralized error handler
 const handleApiError = (error: any): never => {
